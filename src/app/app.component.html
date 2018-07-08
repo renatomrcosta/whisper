@@ -20,4 +20,9 @@
 <div>
   <button mat-raised-button color="primary">Testandooo</button>
 </div>
+<div>
+  <ul>
+    <li class="text" *ngFor="let item of items | async">{{item.msg}}</li>
+  </ul>
+</div>
 
