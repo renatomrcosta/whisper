@@ -7,7 +7,7 @@ import {environment} from "../environments/environment";
 import {AngularFireModule} from "angularfire2";
 import {AngularFirestoreModule} from "angularfire2/firestore";
 import {RouterModule} from "@angular/router";
-import {SignInModule} from "./sign-in/sign-in.module";
+import {LoginModule} from "./login/login.module";
 
 @NgModule({
   declarations: [
@@ -20,7 +20,7 @@ import {SignInModule} from "./sign-in/sign-in.module";
     MaterialWrapperModule,
     RouterModule.forRoot([], {useHash: false}),
 
-    SignInModule
+    LoginModule
   ],
   providers: [],
   bootstrap: [AppComponent]
