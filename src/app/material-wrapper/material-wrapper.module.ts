@@ -2,6 +2,7 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {MatButtonModule} from "@angular/material";
+import {MatIconModule} from "@angular/material";
 
 @NgModule({
   imports: [
@@ -11,7 +12,8 @@ import {MatButtonModule} from "@angular/material";
   ],
   exports: [
     BrowserAnimationsModule,
-    MatButtonModule
+    MatButtonModule,
+    MatIconModule
   ],
   declarations: []
 })
