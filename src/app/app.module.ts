@@ -6,6 +6,8 @@ import {MaterialWrapperModule} from "./material-wrapper/material-wrapper.module"
 import {environment} from "../environments/environment";
 import {AngularFireModule} from "angularfire2";
 import {AngularFirestoreModule} from "angularfire2/firestore";
+import {RouterModule} from "@angular/router";
+import {SignInModule} from "./sign-in/sign-in.module";
 
 @NgModule({
   declarations: [
@@ -15,7 +17,10 @@ import {AngularFirestoreModule} from "angularfire2/firestore";
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
-    MaterialWrapperModule
+    MaterialWrapperModule,
+    RouterModule.forRoot([], {useHash: false}),
+
+    SignInModule
   ],
   providers: [],
   bootstrap: [AppComponent]
