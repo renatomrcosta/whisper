@@ -8,6 +8,7 @@ import {AngularFireModule} from "angularfire2";
 import {AngularFirestoreModule} from "angularfire2/firestore";
 import {RouterModule} from "@angular/router";
 import {LoginModule} from "./login/login.module";
+import {AngularFireAuthModule} from "angularfire2/auth";
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import {LoginModule} from "./login/login.module";
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
+    AngularFireAuthModule,
     RouterModule.forRoot([], {useHash: false}),
 
     LoginModule,
