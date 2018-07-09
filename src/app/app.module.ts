@@ -17,10 +17,10 @@ import {LoginModule} from "./login/login.module";
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
-    MaterialWrapperModule,
     RouterModule.forRoot([], {useHash: false}),
 
-    LoginModule
+    LoginModule,
+    MaterialWrapperModule
   ],
   providers: [],
   bootstrap: [AppComponent]

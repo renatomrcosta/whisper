@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { LoginComponent } from './login.component';
 import {Routes} from "@angular/router";
 import {RouterModule} from "@angular/router";
+import {AuthModule} from "../auth/auth.module";
+import {MaterialWrapperModule} from "../material-wrapper/material-wrapper.module";
 
 
 const routes: Routes = [
@@ -12,7 +14,9 @@ const routes: Routes = [
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    AuthModule,
+    MaterialWrapperModule
   ],
   declarations: [LoginComponent]
 })
