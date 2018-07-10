@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {Observable} from "rxjs/internal/Observable";
 import {AngularFirestore} from "angularfire2/firestore";
+import {AuthService} from "../auth/auth.service";
 
 @Component({
   selector: 'app-messages',
@@ -10,7 +11,7 @@ import {AngularFirestore} from "angularfire2/firestore";
 export class MessagesComponent{
   messages: Observable<any[]>;
 
-  constructor(private db: AngularFirestore){
+  constructor(private db: AngularFirestore, private authService: AuthService){
     this.messages = db.collection('messages').valueChanges();
   }
 
@@ -19,7 +20,7 @@ export class MessagesComponent{
       datetime: new Date(),
       roomId: '1',
       text: 'bananinha',
-      userId: 'test'
+      user: this.authService.user.uid
     });
   }
 }
