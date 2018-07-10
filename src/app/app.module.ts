@@ -6,6 +6,15 @@ import {MaterialWrapperModule} from "./material-wrapper/material-wrapper.module"
 import {environment} from "../environments/environment";
 import {AngularFireModule} from "angularfire2";
 import {AngularFirestoreModule} from "angularfire2/firestore";
+import {RouterModule} from "@angular/router";
+import {Routes} from "@angular/router";
+import {LoginModule} from "./login/login.module";
+import {AngularFireAuthModule} from "angularfire2/auth";
+import {AuthGuard} from "./auth/auth.guard";
+
+const ROUTES: Routes = [
+  {path: '', component: AppComponent, canActivate: [AuthGuard]}
+];
 
 @NgModule({
   declarations: [
@@ -15,6 +24,10 @@ import {AngularFirestoreModule} from "angularfire2/firestore";
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
+    AngularFireAuthModule,
+    RouterModule.forRoot(ROUTES, {useHash: false}),
+
+    LoginModule,
     MaterialWrapperModule
   ],
   providers: [],
