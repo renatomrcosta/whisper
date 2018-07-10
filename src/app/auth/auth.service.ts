@@ -1,9 +1,9 @@
 import {Injectable} from '@angular/core';
 import {AngularFireAuth} from "angularfire2/auth";
 import {AuthProviders} from "./authProviders";
-import {Observable} from "rxjs/internal/Observable";
 import {auth} from "firebase";
 import * as firebase from "firebase";
+import {Observable} from "rxjs/internal/Observable";
 
 @Injectable({
   providedIn: 'root'
