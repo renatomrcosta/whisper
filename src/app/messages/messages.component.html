@@ -1,3 +1,13 @@
 <div>
-  
+  <div
+    *ngFor="let msg of messages | async">
+    <p>{{msg.text}}</p>
+    <p>{{msg.datetime}}</p>
+    <p>{{msg.roomId}}</p>
+  </div>
+</div>
+<div>
+  <button mat-raised-button (click)="addMessage()">
+    Add new message!
+  </button>
 </div>
