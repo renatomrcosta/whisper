@@ -1,9 +1,9 @@
 <div>
   <div
     *ngFor="let msg of messages | async">
+    <h4>Message: </h4>
+    <p><strong>{{msg.user}}</strong> ({{msg.datetime.toDate() | date}})</p>
     <p>{{msg.text}}</p>
-    <p>{{msg.datetime}}</p>
-    <p>{{msg.roomId}}</p>
   </div>
 </div>
 <div>

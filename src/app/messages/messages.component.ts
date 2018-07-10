@@ -20,7 +20,7 @@ export class MessagesComponent{
       datetime: new Date(),
       roomId: '1',
       text: 'bananinha',
-      user: this.authService.user.uid
+      user: this.authService.user.displayName
     });
   }
 }
