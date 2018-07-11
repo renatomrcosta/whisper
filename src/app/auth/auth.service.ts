@@ -29,7 +29,7 @@ export class AuthService {
         break;
     }
 
-    this.angularFireAuth.auth
+    return this.angularFireAuth.auth
       .signInWithPopup(fireProvider)
       .then((result) => {
         this.user = result.user;

@@ -1,0 +1,13 @@
+<div>
+  <div
+    *ngFor="let msg of messages | async">
+    <h4>Message: </h4>
+    <p><strong>{{msg.user}}</strong> ({{msg.datetime.toDate() | date}})</p>
+    <p>{{msg.text}}</p>
+  </div>
+</div>
+<div>
+  <button mat-raised-button (click)="addMessage()">
+    Add new message!
+  </button>
+</div>
