@@ -6,8 +6,12 @@
     <p>{{msg.text}}</p>
   </div>
 </div>
-<div>
+<form>
+  <mat-form-field class="">
+    <textarea id="txtMsg" name="txtMsg"
+              matInput placeholder="Message" [(ngModel)]="msgText"></textarea>
+  </mat-form-field>
   <button mat-raised-button (click)="addMessage()">
     Add new message!
   </button>
-</div>
+</form>
