@@ -19,7 +19,7 @@ export class MessagesComponent implements OnInit{
   }
 
   loadMessages(){
-    this.messages = this.messagesService.loadMessages();
+    this.messages = this.messagesService.loadMessages('1');
   }
 
   addMessage(){

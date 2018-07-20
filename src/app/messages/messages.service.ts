@@ -16,7 +16,8 @@ export class MessagesService {
     this.db.collection('messages').add(message);
   }
 
-  loadMessages(): Observable<any[]> {
-    return this.db.collection('messages', query => query.orderBy('datetime')).valueChanges();
+  loadMessages(roomId: string): Observable<any[]> {
+    return this.db.collection('messages',
+        query => query.where('roomId', '==', roomId).orderBy('datetime')).valueChanges();
   }
 }
