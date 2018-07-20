@@ -7,25 +7,26 @@ import {MessagesService} from './messages.service';
   templateUrl: './messages.component.html',
   styleUrls: ['./messages.component.css']
 })
-export class MessagesComponent implements OnInit{
+export class MessagesComponent implements OnInit {
   messages: Observable<any[]>;
   msgText: string;
 
-  constructor(private messagesService: MessagesService){
+  constructor(private messagesService: MessagesService) {
   }
 
   ngOnInit(): void {
     this.loadMessages();
   }
 
-  loadMessages(){
+  loadMessages() {
     this.messages = this.messagesService.loadMessages('1');
   }
 
-  addMessage(){
+  addMessage() {
     this.messagesService.insertMesage({
       datetime: new Date(),
       roomId: '1',
       text: this.msgText
     });
   }
+}
