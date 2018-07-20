@@ -1,3 +1,7 @@
-<p>
-  rooms works!
-</p>
+<div>
+  <div *ngFor="let room of rooms | async">
+    <mat-list role="list">
+      <mat-list-item role="listitem">{{room.name}}</mat-list-item>
+    </mat-list>
+  </div>
+</div>
