@@ -17,6 +17,6 @@ export class MessagesService {
   }
 
   loadMessages(): Observable<any[]> {
-    return this.db.collection('messages').valueChanges();
+    return this.db.collection('messages', query => query.orderBy('datetime')).valueChanges();
   }
 }
