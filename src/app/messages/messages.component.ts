@@ -1,27 +1,31 @@
-import {Component} from '@angular/core';
-import {Observable} from "rxjs/internal/Observable";
-import {AngularFirestore} from "angularfire2/firestore";
-import {AuthService} from "../auth/auth.service";
+import {Component, OnInit} from '@angular/core';
+import {Observable} from 'rxjs/internal/Observable';
+import {MessagesService} from './messages.service';
 
 @Component({
   selector: 'app-messages',
   templateUrl: './messages.component.html',
   styleUrls: ['./messages.component.css']
 })
-export class MessagesComponent{
+export class MessagesComponent implements OnInit{
   messages: Observable<any[]>;
   msgText: string;
 
-  constructor(private db: AngularFirestore, private authService: AuthService){
-    this.messages = db.collection('messages').valueChanges();
+  constructor(private messagesService: MessagesService){
+  }
+
+  ngOnInit(): void {
+    this.loadMessages();
+  }
+
+  loadMessages(){
+    this.messages = this.messagesService.loadMessages();
   }
 
   addMessage(){
-    this.db.collection('messages').add({
+    this.messagesService.insertMesage({
       datetime: new Date(),
       roomId: '1',
-      text: this.msgText,
-      user: this.authService.user.displayName
+      text: this.msgText
     });
   }
-}
