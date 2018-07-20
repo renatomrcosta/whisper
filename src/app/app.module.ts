@@ -12,6 +12,7 @@ import {LoginModule} from "./login/login.module";
 import {AngularFireAuthModule} from "angularfire2/auth";
 import {AuthGuard} from "./auth/auth.guard";
 import {MessagesModule} from "./messages/messages.module";
+import {RoomsModule} from './rooms/rooms.module';
 
 const ROUTES: Routes = [
   {path: '', component: AppComponent, canActivate: [AuthGuard]}
@@ -29,6 +30,7 @@ const ROUTES: Routes = [
     RouterModule.forRoot(ROUTES, {useHash: false}),
 
     LoginModule,
+    RoomsModule,
     MessagesModule,
     MaterialWrapperModule
   ],
