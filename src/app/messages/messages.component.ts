@@ -10,6 +10,7 @@ import {AuthService} from "../auth/auth.service";
 })
 export class MessagesComponent{
   messages: Observable<any[]>;
+  msgText: string;
 
   constructor(private db: AngularFirestore, private authService: AuthService){
     this.messages = db.collection('messages').valueChanges();
@@ -19,7 +20,7 @@ export class MessagesComponent{
     this.db.collection('messages').add({
       datetime: new Date(),
       roomId: '1',
-      text: 'bananinha',
+      text: this.msgText,
       user: this.authService.user.displayName
     });
   }
