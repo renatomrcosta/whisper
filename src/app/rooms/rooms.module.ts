@@ -6,6 +6,9 @@ import { RoomsComponent } from './rooms.component';
   imports: [
     CommonModule
   ],
+  exports: [
+    RoomsComponent
+  ],
   declarations: [RoomsComponent]
 })
 export class RoomsModule { }
