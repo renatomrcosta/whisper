@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {RoomsService} from './rooms.service';
 import {Observable} from 'rxjs';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-rooms',
@@ -10,7 +11,7 @@ import {Observable} from 'rxjs';
 export class RoomsComponent implements OnInit {
   rooms: Observable<any[]>;
 
-  constructor(private roomsService: RoomsService) { }
+  constructor(private roomsService: RoomsService, private router: Router) { }
 
   ngOnInit() {
     this.getRooms();
@@ -18,5 +19,9 @@ export class RoomsComponent implements OnInit {
 
   getRooms(){
     this.rooms = this.roomsService.getRooms();
+  }
+
+  openRoom(room) {
+    this.router.navigate(['/rooms', room.roomId, 'messages']);
   }
 }
