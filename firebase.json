@@ -7,7 +7,7 @@
     "indexes": "firestore.indexes.json"
   },
   "hosting": {
-    "public": "public",
+    "public": "dist/whisper",
     "ignore": [
       "firebase.json",
       "**/.*",
