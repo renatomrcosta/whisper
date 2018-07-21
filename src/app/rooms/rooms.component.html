@@ -1,0 +1,8 @@
+<div>
+  <div *ngFor="let room of rooms | async">
+    <mat-nav-list role="list">
+      <a (click)="openRoom(room)"
+         mat-list-item role="listitem">{{room.name}}</a>
+    </mat-nav-list>
+  </div>
+</div>

@@ -7,7 +7,7 @@ import {AuthGuard} from "../auth/auth.guard";
 import {MaterialWrapperModule} from "../material-wrapper/material-wrapper.module";
 
 const ROUTES: Routes = [
-  {path: 'messages', component: MessagesComponent, canActivate: [AuthGuard] }
+  {path: 'rooms/:roomId/messages', component: MessagesComponent, canActivate: [AuthGuard] }
 ];
 
 @NgModule({
