@@ -8,8 +8,8 @@
 </div>
 <form>
   <mat-form-field class="">
-    <textarea id="txtMsg" name="txtMsg"
-              matInput placeholder="Message" [(ngModel)]="msgText"></textarea>
+    <input type="text" id="txtMsg" name="txtMsg" autofocus
+              matInput placeholder="Message" [(ngModel)]="msgText" />
   </mat-form-field>
   <button mat-raised-button (click)="addMessage()">
     Add new message!
