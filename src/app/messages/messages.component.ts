@@ -31,5 +31,10 @@ export class MessagesComponent implements OnInit {
       roomId: this.roomId,
       text: this.msgText
     });
+    this.clearForm();
+  }
+
+  clearForm() {
+    this.msgText = '';
   }
 }

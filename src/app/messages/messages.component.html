@@ -2,16 +2,16 @@
   <div
     *ngFor="let msg of messages | async">
     <h4>Message: </h4>
-    <p><strong>{{msg.user}}</strong> ({{msg.datetime.toDate() | date}})</p>
+    <p><strong>{{msg.user}}</strong> ({{msg.datetime.toDate() | date:'dd/MM/yyyy HH:mm:ss'}})</p>
     <p>{{msg.text}}</p>
   </div>
 </div>
 <form>
   <mat-form-field class="">
-    <textarea id="txtMsg" name="txtMsg"
-              matInput placeholder="Message" [(ngModel)]="msgText"></textarea>
+    <input type="text" id="txtMsg" name="txtMsg" autofocus
+              matInput placeholder="Message" [(ngModel)]="msgText" />
   </mat-form-field>
-  <button mat-raised-button (click)="addMessage()">
+  <button type="submit" mat-raised-button (click)="addMessage()">
     Add new message!
   </button>
 </form>
