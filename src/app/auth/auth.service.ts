@@ -4,6 +4,7 @@ import {AuthProviders} from "./authProviders";
 import {auth} from "firebase";
 import * as firebase from "firebase";
 import {Observable} from "rxjs/internal/Observable";
+import {Router} from "@angular/router";
 
 @Injectable({
   providedIn: 'root'
@@ -12,12 +13,17 @@ export class AuthService {
   public user: firebase.User;
   public authState: Observable<firebase.User>;
 
-  constructor(private angularFireAuth: AngularFireAuth) {
+  constructor(private angularFireAuth: AngularFireAuth, private router: Router) {
     this.user = null;
     this.authState = this.angularFireAuth.authState;
 
     this.authState.subscribe((user: firebase.User) => {
       this.user = user;
+
+      //user was logged out
+      if(!user){
+        this.router.navigate(['/login']);
+      }
     });
   }
 
@@ -38,7 +44,6 @@ export class AuthService {
 
   logout(){
     this.angularFireAuth.auth.signOut().then(function () {
-      this.user = null;
       console.log('user logged out');
     });
   }
