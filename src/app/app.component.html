@@ -5,7 +5,9 @@
         <fa-icon icon="bars"></fa-icon>
       </button>
       <mat-menu #menu="matMenu">
-        <button mat-menu-item>
+        <button
+          (click)="rooms()"
+          mat-menu-item>
           <span>Rooms</span>
         </button>
       </mat-menu>
