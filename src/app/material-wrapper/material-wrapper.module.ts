@@ -7,6 +7,7 @@ import {MatGridListModule} from "@angular/material";
 import {MatCardModule} from "@angular/material";
 import {MatInputModule} from "@angular/material";
 import {FormsModule} from '@angular/forms';
+import {MatToolbarModule} from "@angular/material";
 
 @NgModule({
   imports: [
@@ -22,6 +23,7 @@ import {FormsModule} from '@angular/forms';
     MatListModule,
     MatCardModule,
     MatInputModule,
+    MatToolbarModule,
     FormsModule
   ],
   declarations: []
