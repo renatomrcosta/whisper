@@ -35,4 +35,10 @@ export class AuthService {
         this.user = result.user;
       });
   }
+
+  logout(){
+    this.angularFireAuth.auth.signOut().then(function () {
+      console.log('user logged out');
+    });
+  }
 }
