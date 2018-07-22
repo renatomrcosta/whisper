@@ -14,6 +14,7 @@ import { faComments } from '@fortawesome/free-solid-svg-icons';
 import {MatMenuModule} from "@angular/material";
 import {faBars} from "@fortawesome/free-solid-svg-icons";
 import {faSignOutAlt} from "@fortawesome/free-solid-svg-icons";
+import {FlexLayoutModule} from "@angular/flex-layout";
 
 loadIcons();
 
@@ -42,6 +43,7 @@ function loadIcons() {
     MatToolbarModule,
     MatMenuModule,
     FontAwesomeModule,
+    FlexLayoutModule,
     FormsModule
   ],
   declarations: []

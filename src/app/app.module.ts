@@ -32,8 +32,7 @@ const ROUTES: Routes = [
     LoginModule,
     RoomsModule,
     MessagesModule,
-    MaterialWrapperModule,
-    FlexLayoutModule
+    MaterialWrapperModule
   ],
   providers: [],
   bootstrap: [AppComponent]
