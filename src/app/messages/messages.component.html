@@ -1,17 +1,18 @@
-<div>
-  <div
-    *ngFor="let msg of messages | async">
-    <h4>Message: </h4>
-    <p><strong>{{msg.user}}</strong> ({{msg.datetime.toDate() | date:'dd/MM/yyyy HH:mm:ss'}})</p>
-    <p>{{msg.text}}</p>
+<div class="messages-container">
+  <div class="message-list-container">
+    <div
+      *ngFor="let msg of messages | async">
+      <p><strong>{{msg.user.name}} ({{msg.user.email}})</strong> ({{msg.datetime.toDate() | date:'dd/MM/yyyy HH:mm:ss'}})</p>
+      <p>{{msg.text}}</p>
+    </div>
+  </div>
+  <div class="message-form-container">
+    <mat-form-field class="">
+      <input type="text" id="txtMsg" name="txtMsg" autofocus
+                matInput placeholder="Message" [(ngModel)]="msgText" />
+    </mat-form-field>
+    <button mat-mini-fab (click)="addMessage()" color="primary">
+      <fa-icon icon="chevron-circle-right"></fa-icon>
+    </button>
   </div>
 </div>
-<form>
-  <mat-form-field class="">
-    <input type="text" id="txtMsg" name="txtMsg" autofocus
-              matInput placeholder="Message" [(ngModel)]="msgText" />
-  </mat-form-field>
-  <button type="submit" mat-raised-button (click)="addMessage()">
-    Add new message!
-  </button>
-</form>

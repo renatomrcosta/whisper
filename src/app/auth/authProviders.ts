@@ -1,5 +1,8 @@
 
 
 export enum AuthProviders {
-  Google
+  Facebook,
+  Google,
+  Github,
+  Twitter
 }

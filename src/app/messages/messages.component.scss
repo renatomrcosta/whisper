@@ -1,0 +1,13 @@
+.messages-container {
+  height: 100%;
+}
+
+.message-list-container {
+  max-height: 600px;
+  overflow-y: scroll;
+}
+
+.message-form-container {
+  position: absolute;
+  bottom: 0;
+}

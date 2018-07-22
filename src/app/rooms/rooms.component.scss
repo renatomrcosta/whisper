@@ -1,0 +1,11 @@
+.rooms-container {
+  height: 100%;
+
+  .flex-container {
+    .room-item {
+      button {
+        min-width: 300px;
+      }
+    }
+  }
+}

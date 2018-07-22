@@ -12,8 +12,15 @@ export class MessagesService {
   }
 
   insertMesage(message){
-    message.user = this.authService.user.displayName;
+    message.user = this.buildUserObject();
     this.db.collection('messages').add(message);
+  }
+
+  private buildUserObject() {
+    return {
+      name: this.authService.user.displayName,
+      email: this.authService.user.email
+    };
   }
 
   loadMessages(roomId: string): Observable<any[]> {

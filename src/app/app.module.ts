@@ -12,6 +12,7 @@ import {LoginModule} from "./login/login.module";
 import {AngularFireAuthModule} from "angularfire2/auth";
 import {MessagesModule} from "./messages/messages.module";
 import {RoomsModule} from './rooms/rooms.module';
+import {FlexLayoutModule} from "@angular/flex-layout";
 
 const ROUTES: Routes = [
   {path: '', redirectTo: '/rooms',  pathMatch: 'full' }

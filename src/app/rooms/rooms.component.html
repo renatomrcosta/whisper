@@ -1,8 +1,18 @@
-<div>
-  <div *ngFor="let room of rooms | async">
-    <mat-nav-list role="list">
-      <a (click)="openRoom(room)"
-         mat-list-item role="listitem">{{room.name}}</a>
-    </mat-nav-list>
+<div class="rooms-container">
+  <div fxLayout="column" fxLayoutAlign="center center">
+    <div class="flex-container">
+      <div class="room-item" *ngFor="let room of rooms | async">
+        <mat-nav-list role="list">
+          <mat-list-item>
+            <button
+              mat-raised-button
+              color="primary"
+              (click)="openRoom(room)">
+              <fa-icon icon="users"></fa-icon>&nbsp;{{room.name}}
+            </button>
+          </mat-list-item>
+        </mat-nav-list>
+      </div>
+    </div>
   </div>
 </div>
