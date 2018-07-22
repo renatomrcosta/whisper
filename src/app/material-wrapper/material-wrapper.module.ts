@@ -15,12 +15,18 @@ import {MatMenuModule} from "@angular/material";
 import {faBars} from "@fortawesome/free-solid-svg-icons";
 import {faSignOutAlt} from "@fortawesome/free-solid-svg-icons";
 import {FlexLayoutModule} from "@angular/flex-layout";
+import {faGithub} from "@fortawesome/free-brands-svg-icons";
+import {faTwitter} from "@fortawesome/free-brands-svg-icons";
+import {faFacebook} from "@fortawesome/free-brands-svg-icons";
 
 loadIcons();
 
 function loadIcons() {
   library.add(
     faGoogle,
+    faFacebook,
+    faTwitter,
+    faGithub,
     faComments,
     faBars,
     faSignOutAlt

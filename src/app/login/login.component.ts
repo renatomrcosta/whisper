@@ -17,8 +17,22 @@ export class LoginComponent implements OnInit {
   }
 
   loginGoogle() {
-    this.authService.login(AuthProviders.Google).then(() => {
+    this.authService.login(AuthProviders.Google).then(this.navigateHome);
+  }
+
+  loginFacebook() {
+    this.authService.login(AuthProviders.Facebook).then(this.navigateHome);
+  }
+
+  loginTwitter() {
+    this.authService.login(AuthProviders.Twitter).then(this.navigateHome);
+  }
+
+  loginGithub() {
+    this.authService.login(AuthProviders.Github).then(this.navigateHome);
+  }
+
+  private navigateHome() {
       this.router.navigate(['/rooms']);
-    });
   }
 }

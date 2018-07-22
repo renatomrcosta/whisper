@@ -30,8 +30,17 @@ export class AuthService {
   login(authProvider: AuthProviders) {
     let fireProvider = null;
     switch (authProvider) {
+      case AuthProviders.Facebook:
+        fireProvider = new auth.FacebookAuthProvider();
+        break;
       case AuthProviders.Google:
         fireProvider = new auth.GoogleAuthProvider();
+        break;
+      case AuthProviders.Github:
+        fireProvider = new auth.GithubAuthProvider();
+        break;
+      case AuthProviders.Twitter:
+        fireProvider = new auth.TwitterAuthProvider();
         break;
     }
 
