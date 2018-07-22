@@ -19,6 +19,7 @@ import {faGithub} from "@fortawesome/free-brands-svg-icons";
 import {faTwitter} from "@fortawesome/free-brands-svg-icons";
 import {faFacebook} from "@fortawesome/free-brands-svg-icons";
 import {faUsers} from "@fortawesome/free-solid-svg-icons";
+import {faChevronCircleRight} from "@fortawesome/free-solid-svg-icons";
 
 loadIcons();
 
@@ -31,7 +32,8 @@ function loadIcons() {
     faComments,
     faBars,
     faSignOutAlt,
-    faUsers
+    faUsers,
+    faChevronCircleRight
   );
 }
 
