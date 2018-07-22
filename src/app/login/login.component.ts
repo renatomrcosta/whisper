@@ -2,18 +2,17 @@ import { Component, OnInit } from '@angular/core';
 import {AuthService} from "../auth/auth.service";
 import {AuthProviders} from "../auth/authProviders";
 import {Router} from "@angular/router";
+import {AfterViewInit} from "@angular/core";
+import {AfterViewChecked} from "@angular/core";
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent {
 
   constructor(private authService: AuthService, private router: Router) {
-  }
-
-  ngOnInit() {
   }
 
   loginGoogle() {
@@ -34,5 +33,9 @@ export class LoginComponent implements OnInit {
 
   private navigateHome() {
       this.router.navigate(['/rooms']);
+  }
+
+  isUserLoggedIn(): boolean {
+    return this.authService.isLogged();
   }
 }

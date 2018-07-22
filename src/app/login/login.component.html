@@ -1,6 +1,6 @@
 <div class="login-container">
   <div fxLayout="column" fxLayoutAlign="center center">
-    <div class="flex-container">
+    <div class="flex-container" *ngIf="!isUserLoggedIn()">
       <button mat-raised-button
               class="btn-google"
               aria-label="Sign in with Google" (click)="loginGoogle()">
