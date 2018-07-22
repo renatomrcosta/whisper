@@ -18,6 +18,7 @@ import {FlexLayoutModule} from "@angular/flex-layout";
 import {faGithub} from "@fortawesome/free-brands-svg-icons";
 import {faTwitter} from "@fortawesome/free-brands-svg-icons";
 import {faFacebook} from "@fortawesome/free-brands-svg-icons";
+import {faUsers} from "@fortawesome/free-solid-svg-icons";
 
 loadIcons();
 
@@ -29,7 +30,8 @@ function loadIcons() {
     faGithub,
     faComments,
     faBars,
-    faSignOutAlt
+    faSignOutAlt,
+    faUsers
   );
 }
 
