@@ -38,7 +38,12 @@ export class AuthService {
 
   logout(){
     this.angularFireAuth.auth.signOut().then(function () {
+      this.user = null;
       console.log('user logged out');
     });
+  }
+
+  isLogged() {
+    return this.user !== null;
   }
 }

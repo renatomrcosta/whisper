@@ -15,7 +15,7 @@
     </span>
     <span class="menu-spacer">
     </span>
-    <button mat-button>
+    <button mat-button *ngIf="isUserLoggedIn()">
       <fa-icon icon="sign-out-alt"></fa-icon> Logout
     </button>
   </mat-toolbar-row>
