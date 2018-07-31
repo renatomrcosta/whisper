@@ -5,6 +5,7 @@ import {RouterModule} from "@angular/router";
 import {Routes} from "@angular/router";
 import {AuthGuard} from "../auth/auth.guard";
 import {MaterialWrapperModule} from "../material-wrapper/material-wrapper.module";
+import { MessageComponent } from './message/message.component';
 
 const ROUTES: Routes = [
   {path: 'rooms/:roomId/messages', component: MessagesComponent, canActivate: [AuthGuard] }
@@ -16,6 +17,6 @@ const ROUTES: Routes = [
     RouterModule.forChild(ROUTES),
     MaterialWrapperModule
   ],
-  declarations: [MessagesComponent]
+  declarations: [MessagesComponent, MessageComponent]
 })
 export class MessagesModule { }

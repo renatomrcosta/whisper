@@ -2,8 +2,7 @@
   <div class="message-list-container">
     <div
       *ngFor="let msg of messages | async">
-      <p><strong>{{msg.user.name}} ({{msg.user.email}})</strong> ({{msg.datetime.toDate() | date:'dd/MM/yyyy HH:mm:ss'}})</p>
-      <p>{{msg.text}}</p>
+      <app-message [message]="msg"></app-message>
     </div>
   </div>
   <div class="message-form-container">
