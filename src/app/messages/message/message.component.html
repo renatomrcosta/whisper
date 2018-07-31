@@ -1,3 +1,10 @@
-
-<p><strong>{{message.user.name}} ({{message.user.email}})</strong> ({{message.datetime.toDate() | date:'dd/MM/yyyy HH:mm:ss'}})</p>
-<p>{{message.text}}</p>
+<div
+  [ngClass]="{'user-message': message.user.uid === uid}"
+  class="message">
+  <p>
+    <strong>{{message.user.name}}</strong>
+  </p>
+  <p>
+    {{message.text}}
+  </p>
+</div>
