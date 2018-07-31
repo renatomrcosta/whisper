@@ -18,6 +18,7 @@ export class MessagesService {
 
   private buildUserObject() {
     return {
+      uid: this.authService.user.uid,
       name: this.authService.user.displayName,
       email: this.authService.user.email
     };
