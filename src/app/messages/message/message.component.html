@@ -1,10 +1,12 @@
 <div
-  [ngClass]="{'user-message': message.user.uid === uid}"
-  class="message">
-  <p>
-    <strong>{{message.user.name}}</strong>
-  </p>
-  <p>
-    {{message.text}}
-  </p>
+  [ngClass]="{'message-wrapper-alt': message.user.uid === uid}"
+  class="message-wrapper">
+  <div class="message">
+    <p>
+      <strong>{{message.user.name}}</strong>
+    </p>
+    <p>
+      {{message.text}}
+    </p>
+  </div>
 </div>
