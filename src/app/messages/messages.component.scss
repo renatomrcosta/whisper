@@ -1,13 +1,24 @@
 .messages-container {
-  height: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  min-height: 100vh;
+  overflow: hidden;
 }
 
 .message-list-container {
-  max-height: 600px;
-  overflow-y: scroll;
+  flex: 1;
+  margin: 16px;
+  overflow-y: auto;
 }
 
 .message-form-container {
-  position: absolute;
-  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  flex: none;
+  margin: 16px
+}
+
+.msg-input {
+  width: 100%;
 }
