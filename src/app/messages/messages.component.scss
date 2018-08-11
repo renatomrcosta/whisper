@@ -1,15 +1,30 @@
 .messages-container {
-
+  min-height: 100%;
+  display: flex;
 }
 
 .messages-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  height: 100%;
+  padding: 16px;
+  width: 100%;
 }
 
 .message-list-container {
+  flex: 1;
 }
 
 .message-form-container {
+  display: flex;
+  flex-direction: row;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .msg-input {
+  width: 100%;
+
 }
