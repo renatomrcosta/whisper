@@ -12,7 +12,7 @@ import {LoginModule} from "./login/login.module";
 import {AngularFireAuthModule} from "angularfire2/auth";
 import {MessagesModule} from "./messages/messages.module";
 import {RoomsModule} from './rooms/rooms.module';
-import {FlexLayoutModule} from "@angular/flex-layout";
+import { HeaderComponent } from './header/header.component';
 
 const ROUTES: Routes = [
   {path: '', redirectTo: '/rooms',  pathMatch: 'full' }
@@ -20,7 +20,8 @@ const ROUTES: Routes = [
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -33,6 +34,9 @@ const ROUTES: Routes = [
     RoomsModule,
     MessagesModule,
     MaterialWrapperModule
+  ],
+  exports: [
+    HeaderComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
