@@ -1,19 +1,17 @@
 <div class="messages-container">
-  <div class="messages-wrapper">
-    <div class="message-list-container">
-      <div
-        *ngFor="let msg of messages | async">
-        <app-message [message]="msg"></app-message>
-      </div>
+  <div class="message-list-container">
+    <div
+      *ngFor="let msg of messages | async">
+      <app-message [message]="msg"></app-message>
     </div>
-    <form class="message-form-container">
-      <mat-form-field class="msg-input">
-        <input type="text" id="txtMsg" name="txtMsg" autofocus
-                  matInput placeholder="Message" [(ngModel)]="msgText" />
-      </mat-form-field>
-      <button mat-mini-fab (click)="addMessage()" color="primary">
-        <fa-icon icon="chevron-circle-right"></fa-icon>
-      </button>
-    </form>
   </div>
+  <form class="message-form-container">
+    <mat-form-field class="msg-input">
+      <input type="text" id="txtMsg" name="txtMsg" autofocus
+                matInput placeholder="Message" [(ngModel)]="msgText" />
+    </mat-form-field>
+    <button mat-mini-fab (click)="addMessage()" color="primary">
+      <fa-icon icon="chevron-circle-right"></fa-icon>
+    </button>
+  </form>
 </div>
