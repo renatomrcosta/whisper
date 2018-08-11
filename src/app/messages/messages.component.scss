@@ -1,8 +1,10 @@
 .messages-container {
+  position: fixed;
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  min-height: 100vh;
+  height: 95vh;
+  min-height: 95vh;
+  width: 100%;
   overflow: hidden;
 }
 
