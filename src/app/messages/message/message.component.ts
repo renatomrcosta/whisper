@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {AuthService} from '../../auth/auth.service';
+import {Message} from '../../model/message';
 
 @Component({
   selector: 'app-message',
@@ -9,7 +10,7 @@ import {AuthService} from '../../auth/auth.service';
 export class MessageComponent implements OnInit {
 
   @Input()
-  public message: object;
+  public message: Message;
   public uid: string;
 
   constructor(private authService: AuthService) {
