@@ -38,10 +38,10 @@ jobs:
           name: angular-build
           command: yarn ng build --prod --aot
 
-      # run tests
-      - run:
-          name: angular-test
-          command: yarn ng test --watch=false
+#      # run tests
+#      - run:
+#          name: angular-test
+#          command: yarn ng test --watch=false
 
     #store results
       - store_artifacts:
