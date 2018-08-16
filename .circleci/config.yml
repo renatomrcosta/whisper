@@ -41,9 +41,9 @@ jobs:
       # run tests
       - run:
           name: angular-test
-          command: yarn ng test --single-run
+          command: yarn ng test --watch=false
 
-      #store results
+    #store results
       - store_artifacts:
           path: test-results.xml
           prefix: tests
