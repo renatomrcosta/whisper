@@ -41,7 +41,7 @@ jobs:
       # run tests
       - run:
           name: angular-test
-          command: yarn test --single-run
+          command: yarn ng test --single-run
 
       #store results
       - store_artifacts:
